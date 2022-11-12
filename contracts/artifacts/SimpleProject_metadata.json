@@ -20,6 +20,24 @@
 			},
 			{
 				"inputs": [],
+				"name": "person",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "favoriteNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "retrieve",
 				"outputs": [
 					{
@@ -73,11 +91,11 @@
 	},
 	"sources": {
 		"contracts/SimpleStorage.sol": {
-			"keccak256": "0x1c58d9de21c6db81a2736225bfe134a82fde946463962037f509d7a864cdea89",
+			"keccak256": "0x1d2962e376a204a7c98e5e30eb40ab0ee832ac8a221153069ecc814b3b5565e4",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3ea0fdb8d14aa00cd21140a0f833fddda6b169ba654185fb4cf1a08bb1f0914a",
-				"dweb:/ipfs/QmU8YWQuXrEHYXhu2KLxicViBtFWvHGT7cm82phQVj4JZA"
+				"bzz-raw://1ed02c1decbbe393bf48d36ccb241e876926093139f9843093c72574a1945e40",
+				"dweb:/ipfs/QmYeQd3fiexKm1bUnwpawnxpXbgfUdAUh9kPZtuZN6BoCC"
 			]
 		}
 	},
