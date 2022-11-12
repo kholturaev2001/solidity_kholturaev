@@ -24,9 +24,13 @@ contract SimpleProject {
        return favoriteNumber;
    }
 
+    // calldata, memory, storage - 3 main ways to store information. The others one are STACK, CODE, LOGS.
+    // MEMORY exists temporarily, is mutable
+    // CALLDATA exists temporarilt, is not mutable
+    // STORAGE varibale exist even outside just a function exucuted
+
     function addPerson(string memory _name, uint256 _favoriteNumber) public {
-        People memory newPerson = People({favoriteNumber: _favoriteNumber, name: _name});
-        people.push(newPerson);
+        people.push(People(_favoriteNumber, _name));
     }
 
 
