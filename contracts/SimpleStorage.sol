@@ -5,7 +5,7 @@
 
 pragma solidity ^0.8.6;
 
-contract SimpleProject {
+contract SimpleStorage {
 
    uint256 favoriteNumber;
 
@@ -40,12 +40,6 @@ contract SimpleProject {
         people.push(People(_favoriteNumber, _name));
         nameToFavoriteNumber[_name] = _favoriteNumber;
     }
-
-
-
-
-
-
 }
 
 
