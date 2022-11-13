@@ -9,18 +9,17 @@ contract SimpleStorage {
 
    uint256 favoriteNumber;
 
-    mapping(string => uint256) public nameToFavoriteNumber;
+    mapping(string => =uint256) public nameToFavoriteNumber;
 
 
    struct People {
-       uint256 favoriteNumber;
+       uint256 favoriteNumber; 
        string name;
    }
 
 
     // uint256[] public favoriteNumberList;  
-    People[] public people;
-
+    People[] public people;  
    function store(uint256 _favoriteNumber) public virtual {
        favoriteNumber = _favoriteNumber;
     //    retrieve();
