@@ -15,6 +15,11 @@ contract FundMe {
     address[] public funders;
     mapping(address => uint256) public addressToAmountFunded;
 
+    // constructor function gets immediately called in the same transaction when you deploy the contract
+    constructor() {
+        minimumUsd = 2;
+    }
+
     function fund() public payable {
         require(
             msg.value.getConversionRate() >= minimumUsd,
@@ -38,15 +43,6 @@ contract FundMe {
         funders = new address[](0);
 
         // actually withdraw the funds
-
-        /* There are 3 ways to send ETH, native blockchain currency or tokens to other contracts */
-
-        // transfer
-        payable(msg.sender).transfer(address(this).balance);
-        
-        // send
-        bool sendSuccess = payable(msg.sender).send(address(this).balance);
-        require(sendSuccess, "Send failded")
 
         // call
         (bool callSuccess, ) = payable(msg.sender).call{value: address(this).balance}("");
