@@ -7,24 +7,30 @@ pragma solidity ^0.8.6;
 
 import "./PriceConverter.sol";
 
+// constant, immutable - There are 2 keywords, that make it so that your varibles can't be changed
+
+// 859,757 gas price
+// 840209 gas pricee after adding constant keyword
+
 contract FundMe {
     using PriceConverter for uint256;
 
-    uint256 public minimumUsd = 50 * 1e18;
+    uint256 public MINIMUM_USD = 50 * 1e18;
+    // 21415 - constant
+    // 23515 - non-contant
 
     address[] public funders;
     mapping(address => uint256) public addressToAmountFunded;
 
     address public owner;
 
-    // constructor function gets immediately called in the same transaction when you deploy the contract
     constructor() {
         owner = msg.sender;
     }
 
     function fund() public payable {
         require(
-            msg.value.getConversionRate() >= minimumUsd,
+            msg.value.getConversionRate() >= MINIMUM_USD,
             "Didn't send enough!"
         ); // 1e18 = 1 * 10 ** 18 == 1000000000000000000
         funders.push(msg.sender);
