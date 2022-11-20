@@ -15,9 +15,11 @@ contract FundMe {
     address[] public funders;
     mapping(address => uint256) public addressToAmountFunded;
 
+    address public owner;
+
     // constructor function gets immediately called in the same transaction when you deploy the contract
     constructor() {
-        minimumUsd = 2;
+        owner = msg.sender;
     }
 
     function fund() public payable {
@@ -46,6 +48,6 @@ contract FundMe {
 
         // call
         (bool callSuccess, ) = payable(msg.sender).call{value: address(this).balance}("");
-        require(callSuccess, "Call failed")
+        require(callSuccess, "Call failed");
     }
 }
