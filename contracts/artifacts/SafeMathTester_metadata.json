@@ -1,0 +1,66 @@
+{
+	"compiler": {
+		"version": "0.8.0+commit.c7dfd78e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "add",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "bigNumber",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/SafeMathTester.sol": "SafeMathTester"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/SafeMathTester.sol": {
+			"keccak256": "0xa6971c1bf4dc06ddf70da25702c0a6a5c8bb7dfb9bc270eacf582d389a5e1b53",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6819336491edb94bc7e719a8e074ca136eec754cbb4d60113c0a23cfb040a608",
+				"dweb:/ipfs/QmaeTNJnP4NZzxWY6dKYUqsJERy6uAZJwQVPpLECLoa6ku"
+			]
+		}
+	},
+	"version": 1
+}
