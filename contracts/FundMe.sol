@@ -16,16 +16,18 @@ contract FundMe {
     using PriceConverter for uint256;
 
     uint256 public MINIMUM_USD = 50 * 1e18;
-    // 21415 - constant
-    // 23515 - non-contant
+    // 21415 - gas - constant
+    // 23515 - gas - non-contant
 
     address[] public funders;
     mapping(address => uint256) public addressToAmountFunded;
 
-    address public owner;
+    address public i_owner;
+    // 21508 - gas - immutable
+    // 23644 - gas - non-immutable
 
     constructor() {
-        owner = msg.sender;
+        i_owner = msg.sender;
     }
 
     function fund() public payable {
@@ -58,7 +60,7 @@ contract FundMe {
     }
 
     modifier onlyOwner {
-        require(msg.sender == owner, "Sender is not owner!");
+        require(msg.sender == i_owner, "Sender is not owner!");
         _;
     }
 }
