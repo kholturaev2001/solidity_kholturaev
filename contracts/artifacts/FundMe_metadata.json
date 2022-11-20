@@ -6,6 +6,25 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "addressToAmountFunded",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "fund",
 				"outputs": [],
@@ -16,42 +35,16 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "ethAmount",
-						"type": "uint256"
-					}
-				],
-				"name": "getConversionRate",
-				"outputs": [
-					{
-						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getPrice",
+				"name": "funders",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "address",
 						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getVersion",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -107,11 +100,19 @@
 			]
 		},
 		"contracts/FundMe.sol": {
-			"keccak256": "0x6cae44ce5fcefb139b475738b6cb9f73509ffa4d56f0fd8f444cc226247b965e",
+			"keccak256": "0x530cdbe2257196743d4f63425cbfe6bfea90f640cb074b0d9bc1dd6cb3456561",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b195e51cf8d36ab5128a9a260d6c052554d553a9afc4cd17dd12aab705bee8ae",
-				"dweb:/ipfs/QmRavY8ochdcPVGMjYDfpdAFMGyHWS8S2Ntc8tCoc15ibs"
+				"bzz-raw://6671482e5cbf66493a4c36caea4c5757667946fd2f7ecf3a1355906469371927",
+				"dweb:/ipfs/QmakcHAiW69z7FNEfiDfdBXUSwes8WE23d67qwppqZN1zW"
+			]
+		},
+		"contracts/PriceConverter.sol": {
+			"keccak256": "0xc34735fc10cfc76e8d1753bdd898515562022174b3c0c2c3cb393a0ffadfc593",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://188fe7f65a80646a73e2bf816d21d0e973865c4d080897a9a7fc462105812257",
+				"dweb:/ipfs/QmVpcHWd3dDafBCWiJ24Bg87Q9R2AbNMG7qdkBBbKRoJAM"
 			]
 		}
 	},
