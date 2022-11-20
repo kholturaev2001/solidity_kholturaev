@@ -12,8 +12,6 @@ import "./PriceConverter.sol";
 // 859,757 gas price
 // 840209 gas pricee after adding constant keyword
 
-error NotOwner();
-
 contract FundMe {
     using PriceConverter for uint256;
 
@@ -56,7 +54,7 @@ contract FundMe {
             address funder = funders[funderIndex];
             addressToAmountFunded[funder] = 0;
         }
-        // reset the array 'funders' with brand new address array with '0' object in it to start
+        // reset the array
         funders = new address[](0);
 
         // actually withdraw the funds
@@ -65,14 +63,13 @@ contract FundMe {
         (bool callSuccess, ) = payable(msg.sender).call{
             value: address(this).balance
         }("");
-        require(callSuccess, "Call failed"); /* It is also possible to use NotWoner error here in order to reduce gas cost */
+        require(callSuccess, "Call failed"); 
     }
 
     modifier onlyOwner() {
-        // require(msg.sender == i_owner, NotOwner());
-        if (msg.sender != i_owner) {
-            revert NotOwner();
-        }
+        require(msg.sender == i_owner, "Sender is not owner!");
         _;
     }
+
+    // What happens if someone sends this contract ETH without calling the fund function?
 }
