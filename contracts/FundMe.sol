@@ -3,7 +3,7 @@
 // Set a minimum funding value in USD
 
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.7;
+pragma solidity ^0.8.6;
 
 import "./PriceConverter.sol";
 
@@ -18,7 +18,7 @@ contract FundMe {
     function fund() public payable {
         require(msg.value.getConversionRate() >= minimumUsd, "Didn't send enough!"); // 1e18 = 1 * 10 ** 18 == 1000000000000000000
         funders.push(msg.sender);
-        addressToAmountFunded[msg.sender] = msg.value;
+        addressToAmountFunded[msg.sender] += msg.value;
     }
 
    
