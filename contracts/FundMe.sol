@@ -31,7 +31,7 @@ contract FundMe {
         addressToAmountFunded[msg.sender] += msg.value;
     }
 
-    function withdraw() public {
+    function withdraw() public onlyOwner /* Hey, with this function before you read all this code inside of it look down at the onlyOwner modifier and do whatever it this first and then do whatever underschol (_; === doing the rest of the code) */ {
         /* starting index, ending index, step amount */
         for (
             uint256 funderIndex = 0;
@@ -49,5 +49,10 @@ contract FundMe {
         // call
         (bool callSuccess, ) = payable(msg.sender).call{value: address(this).balance}("");
         require(callSuccess, "Call failed");
+    }
+
+    modifier onlyOwner {
+        require(msg.sender == owner, "Sender is not owner!");
+        _;
     }
 }
