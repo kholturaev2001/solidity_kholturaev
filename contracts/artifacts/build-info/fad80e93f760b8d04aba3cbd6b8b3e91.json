@@ -1,8 +1,8 @@
 {
-	"id": "132f0caffd25a22190d884f4ac810d0f",
+	"id": "fad80e93f760b8d04aba3cbd6b8b3e91",
 	"_format": "hh-sol-build-info-1",
-	"solcVersion": "0.8.0",
-	"solcLongVersion": "0.8.0+commit.c7dfd78e",
+	"solcVersion": "0.8.6",
+	"solcLongVersion": "0.8.6+commit.11564f7e",
 	"input": {
 		"language": "Solidity",
 		"sources": {
@@ -69,15 +69,48 @@
 						"version": 1
 					},
 					"evm": {
-						"assembly": "    /* \"contracts/SafeMathTester.sol\":58:234  contract SafeMathTester {... */\n  mstore(0x40, 0x80)\n    /* \"contracts/SafeMathTester.sol\":113:116  255 */\n  0xff\n    /* \"contracts/SafeMathTester.sol\":88:116  uint8 public bigNumber = 255 */\n  0x00\n  dup1\n  0x0100\n  exp\n  dup2\n  sload\n  dup2\n  0xff\n  mul\n  not\n  and\n  swap1\n  dup4\n  0xff\n  and\n  mul\n  or\n  swap1\n  sstore\n  pop\n    /* \"contracts/SafeMathTester.sol\":58:234  contract SafeMathTester {... */\n  callvalue\n  dup1\n  iszero\n  tag_1\n  jumpi\n  0x00\n  dup1\n  revert\ntag_1:\n  pop\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x00\n  codecopy\n  0x00\n  return\nstop\n\nsub_0: assembly {\n        /* \"contracts/SafeMathTester.sol\":58:234  contract SafeMathTester {... */\n      mstore(0x40, 0x80)\n      callvalue\n      dup1\n      iszero\n      tag_1\n      jumpi\n      0x00\n      dup1\n      revert\n    tag_1:\n      pop\n      jumpi(tag_2, lt(calldatasize, 0x04))\n      shr(0xe0, calldataload(0x00))\n      dup1\n      0x45964e9e\n      eq\n      tag_3\n      jumpi\n      dup1\n      0x4f2be91f\n      eq\n      tag_4\n      jumpi\n    tag_2:\n      0x00\n      dup1\n      revert\n        /* \"contracts/SafeMathTester.sol\":88:116  uint8 public bigNumber = 255 */\n    tag_3:\n      tag_5\n      tag_6\n      jump\t// in\n    tag_5:\n      mload(0x40)\n      tag_7\n      swap2\n      swap1\n      tag_8\n      jump\t// in\n    tag_7:\n      mload(0x40)\n      dup1\n      swap2\n      sub\n      swap1\n      return\n        /* \"contracts/SafeMathTester.sol\":134:232  function add() public {... */\n    tag_4:\n      tag_9\n      tag_10\n      jump\t// in\n    tag_9:\n      stop\n        /* \"contracts/SafeMathTester.sol\":88:116  uint8 public bigNumber = 255 */\n    tag_6:\n      0x00\n      dup1\n      sload\n      swap1\n      0x0100\n      exp\n      swap1\n      div\n      0xff\n      and\n      dup2\n      jump\t// out\n        /* \"contracts/SafeMathTester.sol\":134:232  function add() public {... */\n    tag_10:\n        /* \"contracts/SafeMathTester.sol\":214:215  1 */\n      0x01\n        /* \"contracts/SafeMathTester.sol\":202:211  bigNumber */\n      0x00\n      dup1\n      sload\n      swap1\n      0x0100\n      exp\n      swap1\n      div\n      0xff\n      and\n        /* \"contracts/SafeMathTester.sol\":202:215  bigNumber + 1 */\n      add\n        /* \"contracts/SafeMathTester.sol\":190:199  bigNumber */\n      0x00\n      dup1\n        /* \"contracts/SafeMathTester.sol\":190:215  bigNumber = bigNumber + 1 */\n      0x0100\n      exp\n      dup2\n      sload\n      dup2\n      0xff\n      mul\n      not\n      and\n      swap1\n      dup4\n      0xff\n      and\n      mul\n      or\n      swap1\n      sstore\n      pop\n        /* \"contracts/SafeMathTester.sol\":134:232  function add() public {... */\n      jump\t// out\n        /* \"#utility.yul\":7:119   */\n    tag_13:\n        /* \"#utility.yul\":90:112   */\n      tag_15\n        /* \"#utility.yul\":106:111   */\n      dup2\n        /* \"#utility.yul\":90:112   */\n      tag_16\n      jump\t// in\n    tag_15:\n        /* \"#utility.yul\":85:88   */\n      dup3\n        /* \"#utility.yul\":78:113   */\n      mstore\n        /* \"#utility.yul\":68:119   */\n      pop\n      pop\n      jump\t// out\n        /* \"#utility.yul\":125:339   */\n    tag_8:\n      0x00\n        /* \"#utility.yul\":252:254   */\n      0x20\n        /* \"#utility.yul\":241:250   */\n      dup3\n        /* \"#utility.yul\":237:255   */\n      add\n        /* \"#utility.yul\":229:255   */\n      swap1\n      pop\n        /* \"#utility.yul\":265:332   */\n      tag_18\n        /* \"#utility.yul\":329:330   */\n      0x00\n        /* \"#utility.yul\":318:327   */\n      dup4\n        /* \"#utility.yul\":314:331   */\n      add\n        /* \"#utility.yul\":305:311   */\n      dup5\n        /* \"#utility.yul\":265:332   */\n      tag_13\n      jump\t// in\n    tag_18:\n        /* \"#utility.yul\":219:339   */\n      swap3\n      swap2\n      pop\n      pop\n      jump\t// out\n        /* \"#utility.yul\":345:431   */\n    tag_16:\n      0x00\n        /* \"#utility.yul\":420:424   */\n      0xff\n        /* \"#utility.yul\":413:418   */\n      dup3\n        /* \"#utility.yul\":409:425   */\n      and\n        /* \"#utility.yul\":398:425   */\n      swap1\n      pop\n        /* \"#utility.yul\":388:431   */\n      swap2\n      swap1\n      pop\n      jump\t// out\n\n    auxdata: 0xa2646970667358221220b256d7bef565843be2b65a3f4248805e84430d7caf4ddf2b2cc78ad81d21fbf864736f6c63430008000033\n}\n",
+						"assembly": "    /* \"contracts/SafeMathTester.sol\":58:234  contract SafeMathTester {... */\n  mstore(0x40, 0x80)\n    /* \"contracts/SafeMathTester.sol\":113:116  255 */\n  0xff\n    /* \"contracts/SafeMathTester.sol\":88:116  uint8 public bigNumber = 255 */\n  0x00\n  dup1\n  0x0100\n  exp\n  dup2\n  sload\n  dup2\n  0xff\n  mul\n  not\n  and\n  swap1\n  dup4\n  0xff\n  and\n  mul\n  or\n  swap1\n  sstore\n  pop\n    /* \"contracts/SafeMathTester.sol\":58:234  contract SafeMathTester {... */\n  callvalue\n  dup1\n  iszero\n  tag_1\n  jumpi\n  0x00\n  dup1\n  revert\ntag_1:\n  pop\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x00\n  codecopy\n  0x00\n  return\nstop\n\nsub_0: assembly {\n        /* \"contracts/SafeMathTester.sol\":58:234  contract SafeMathTester {... */\n      mstore(0x40, 0x80)\n      callvalue\n      dup1\n      iszero\n      tag_1\n      jumpi\n      0x00\n      dup1\n      revert\n    tag_1:\n      pop\n      jumpi(tag_2, lt(calldatasize, 0x04))\n      shr(0xe0, calldataload(0x00))\n      dup1\n      0x45964e9e\n      eq\n      tag_3\n      jumpi\n      dup1\n      0x4f2be91f\n      eq\n      tag_4\n      jumpi\n    tag_2:\n      0x00\n      dup1\n      revert\n        /* \"contracts/SafeMathTester.sol\":88:116  uint8 public bigNumber = 255 */\n    tag_3:\n      tag_5\n      tag_6\n      jump\t// in\n    tag_5:\n      mload(0x40)\n      tag_7\n      swap2\n      swap1\n      tag_8\n      jump\t// in\n    tag_7:\n      mload(0x40)\n      dup1\n      swap2\n      sub\n      swap1\n      return\n        /* \"contracts/SafeMathTester.sol\":134:232  function add() public {... */\n    tag_4:\n      tag_9\n      tag_10\n      jump\t// in\n    tag_9:\n      stop\n        /* \"contracts/SafeMathTester.sol\":88:116  uint8 public bigNumber = 255 */\n    tag_6:\n      0x00\n      dup1\n      sload\n      swap1\n      0x0100\n      exp\n      swap1\n      div\n      0xff\n      and\n      dup2\n      jump\t// out\n        /* \"contracts/SafeMathTester.sol\":134:232  function add() public {... */\n    tag_10:\n        /* \"contracts/SafeMathTester.sol\":214:215  1 */\n      0x01\n        /* \"contracts/SafeMathTester.sol\":202:211  bigNumber */\n      0x00\n      dup1\n      sload\n      swap1\n      0x0100\n      exp\n      swap1\n      div\n      0xff\n      and\n        /* \"contracts/SafeMathTester.sol\":202:215  bigNumber + 1 */\n      add\n        /* \"contracts/SafeMathTester.sol\":190:199  bigNumber */\n      0x00\n      dup1\n        /* \"contracts/SafeMathTester.sol\":190:215  bigNumber = bigNumber + 1 */\n      0x0100\n      exp\n      dup2\n      sload\n      dup2\n      0xff\n      mul\n      not\n      and\n      swap1\n      dup4\n      0xff\n      and\n      mul\n      or\n      swap1\n      sstore\n      pop\n        /* \"contracts/SafeMathTester.sol\":134:232  function add() public {... */\n      jump\t// out\n        /* \"#utility.yul\":7:119   */\n    tag_13:\n        /* \"#utility.yul\":90:112   */\n      tag_15\n        /* \"#utility.yul\":106:111   */\n      dup2\n        /* \"#utility.yul\":90:112   */\n      tag_16\n      jump\t// in\n    tag_15:\n        /* \"#utility.yul\":85:88   */\n      dup3\n        /* \"#utility.yul\":78:113   */\n      mstore\n        /* \"#utility.yul\":68:119   */\n      pop\n      pop\n      jump\t// out\n        /* \"#utility.yul\":125:339   */\n    tag_8:\n        /* \"#utility.yul\":214:218   */\n      0x00\n        /* \"#utility.yul\":252:254   */\n      0x20\n        /* \"#utility.yul\":241:250   */\n      dup3\n        /* \"#utility.yul\":237:255   */\n      add\n        /* \"#utility.yul\":229:255   */\n      swap1\n      pop\n        /* \"#utility.yul\":265:332   */\n      tag_18\n        /* \"#utility.yul\":329:330   */\n      0x00\n        /* \"#utility.yul\":318:327   */\n      dup4\n        /* \"#utility.yul\":314:331   */\n      add\n        /* \"#utility.yul\":305:311   */\n      dup5\n        /* \"#utility.yul\":265:332   */\n      tag_13\n      jump\t// in\n    tag_18:\n        /* \"#utility.yul\":219:339   */\n      swap3\n      swap2\n      pop\n      pop\n      jump\t// out\n        /* \"#utility.yul\":345:431   */\n    tag_16:\n        /* \"#utility.yul\":380:387   */\n      0x00\n        /* \"#utility.yul\":420:424   */\n      0xff\n        /* \"#utility.yul\":413:418   */\n      dup3\n        /* \"#utility.yul\":409:425   */\n      and\n        /* \"#utility.yul\":398:425   */\n      swap1\n      pop\n        /* \"#utility.yul\":388:431   */\n      swap2\n      swap1\n      pop\n      jump\t// out\n\n    auxdata: 0xa2646970667358221220752c3c70900d6a13cb575261fdbf425f464be9734243b8e9a42909af9b64e43e64736f6c63430008060033\n}\n",
 						"bytecode": {
+							"functionDebugData": {},
 							"generatedSources": [],
 							"linkReferences": {},
-							"object": "608060405260ff6000806101000a81548160ff021916908360ff16021790555034801561002b57600080fd5b5060ff8061003a6000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c806345964e9e1460375780634f2be91f146051575b600080fd5b603d6059565b6040516048919060a3565b60405180910390f35b6057606a565b005b60008054906101000a900460ff1681565b600160008054906101000a900460ff16016000806101000a81548160ff021916908360ff160217905550565b609d8160bc565b82525050565b600060208201905060b660008301846096565b92915050565b600060ff8216905091905056fea2646970667358221220b256d7bef565843be2b65a3f4248805e84430d7caf4ddf2b2cc78ad81d21fbf864736f6c63430008000033",
-							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0xFF PUSH1 0x0 DUP1 PUSH2 0x100 EXP DUP2 SLOAD DUP2 PUSH1 0xFF MUL NOT AND SWAP1 DUP4 PUSH1 0xFF AND MUL OR SWAP1 SSTORE POP CALLVALUE DUP1 ISZERO PUSH2 0x2B JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0xFF DUP1 PUSH2 0x3A PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH1 0x32 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x45964E9E EQ PUSH1 0x37 JUMPI DUP1 PUSH4 0x4F2BE91F EQ PUSH1 0x51 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x3D PUSH1 0x59 JUMP JUMPDEST PUSH1 0x40 MLOAD PUSH1 0x48 SWAP2 SWAP1 PUSH1 0xA3 JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST PUSH1 0x57 PUSH1 0x6A JUMP JUMPDEST STOP JUMPDEST PUSH1 0x0 DUP1 SLOAD SWAP1 PUSH2 0x100 EXP SWAP1 DIV PUSH1 0xFF AND DUP2 JUMP JUMPDEST PUSH1 0x1 PUSH1 0x0 DUP1 SLOAD SWAP1 PUSH2 0x100 EXP SWAP1 DIV PUSH1 0xFF AND ADD PUSH1 0x0 DUP1 PUSH2 0x100 EXP DUP2 SLOAD DUP2 PUSH1 0xFF MUL NOT AND SWAP1 DUP4 PUSH1 0xFF AND MUL OR SWAP1 SSTORE POP JUMP JUMPDEST PUSH1 0x9D DUP2 PUSH1 0xBC JUMP JUMPDEST DUP3 MSTORE POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP3 ADD SWAP1 POP PUSH1 0xB6 PUSH1 0x0 DUP4 ADD DUP5 PUSH1 0x96 JUMP JUMPDEST SWAP3 SWAP2 POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0xFF DUP3 AND SWAP1 POP SWAP2 SWAP1 POP JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xB2 JUMP 0xD7 0xBE CREATE2 PUSH6 0x843BE2B65A3F TIMESTAMP 0x48 DUP1 0x5E DUP5 NUMBER 0xD PUSH29 0xAF4DDF2B2CC78AD81D21FBF864736F6C63430008000033000000000000 ",
+							"object": "608060405260ff6000806101000a81548160ff021916908360ff16021790555034801561002b57600080fd5b5060ff8061003a6000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c806345964e9e1460375780634f2be91f146051575b600080fd5b603d6059565b6040516048919060a3565b60405180910390f35b6057606a565b005b60008054906101000a900460ff1681565b600160008054906101000a900460ff16016000806101000a81548160ff021916908360ff160217905550565b609d8160bc565b82525050565b600060208201905060b660008301846096565b92915050565b600060ff8216905091905056fea2646970667358221220752c3c70900d6a13cb575261fdbf425f464be9734243b8e9a42909af9b64e43e64736f6c63430008060033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0xFF PUSH1 0x0 DUP1 PUSH2 0x100 EXP DUP2 SLOAD DUP2 PUSH1 0xFF MUL NOT AND SWAP1 DUP4 PUSH1 0xFF AND MUL OR SWAP1 SSTORE POP CALLVALUE DUP1 ISZERO PUSH2 0x2B JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0xFF DUP1 PUSH2 0x3A PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH1 0x32 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x45964E9E EQ PUSH1 0x37 JUMPI DUP1 PUSH4 0x4F2BE91F EQ PUSH1 0x51 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x3D PUSH1 0x59 JUMP JUMPDEST PUSH1 0x40 MLOAD PUSH1 0x48 SWAP2 SWAP1 PUSH1 0xA3 JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST PUSH1 0x57 PUSH1 0x6A JUMP JUMPDEST STOP JUMPDEST PUSH1 0x0 DUP1 SLOAD SWAP1 PUSH2 0x100 EXP SWAP1 DIV PUSH1 0xFF AND DUP2 JUMP JUMPDEST PUSH1 0x1 PUSH1 0x0 DUP1 SLOAD SWAP1 PUSH2 0x100 EXP SWAP1 DIV PUSH1 0xFF AND ADD PUSH1 0x0 DUP1 PUSH2 0x100 EXP DUP2 SLOAD DUP2 PUSH1 0xFF MUL NOT AND SWAP1 DUP4 PUSH1 0xFF AND MUL OR SWAP1 SSTORE POP JUMP JUMPDEST PUSH1 0x9D DUP2 PUSH1 0xBC JUMP JUMPDEST DUP3 MSTORE POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP3 ADD SWAP1 POP PUSH1 0xB6 PUSH1 0x0 DUP4 ADD DUP5 PUSH1 0x96 JUMP JUMPDEST SWAP3 SWAP2 POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0xFF DUP3 AND SWAP1 POP SWAP2 SWAP1 POP JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 PUSH22 0x2C3C70900D6A13CB575261FDBF425F464BE9734243B8 0xE9 LOG4 0x29 MULMOD 0xAF SWAP12 PUSH5 0xE43E64736F PUSH13 0x63430008060033000000000000 ",
 							"sourceMap": "58:176:0:-:0;;;113:3;88:28;;;;;;;;;;;;;;;;;;;;58:176;;;;;;;;;;;;;;;;"
 						},
 						"deployedBytecode": {
+							"functionDebugData": {
+								"@add_15": {
+									"entryPoint": 106,
+									"id": 15,
+									"parameterSlots": 0,
+									"returnSlots": 0
+								},
+								"@bigNumber_4": {
+									"entryPoint": 89,
+									"id": 4,
+									"parameterSlots": 0,
+									"returnSlots": 0
+								},
+								"abi_encode_t_uint8_to_t_uint8_fromStack": {
+									"entryPoint": 150,
+									"id": null,
+									"parameterSlots": 2,
+									"returnSlots": 0
+								},
+								"abi_encode_tuple_t_uint8__to_t_uint8__fromStack_reversed": {
+									"entryPoint": 163,
+									"id": null,
+									"parameterSlots": 2,
+									"returnSlots": 1
+								},
+								"cleanup_t_uint8": {
+									"entryPoint": 188,
+									"id": null,
+									"parameterSlots": 1,
+									"returnSlots": 1
+								}
+							},
 							"generatedSources": [
 								{
 									"ast": {
@@ -326,19 +359,19 @@
 							],
 							"immutableReferences": {},
 							"linkReferences": {},
-							"object": "6080604052348015600f57600080fd5b506004361060325760003560e01c806345964e9e1460375780634f2be91f146051575b600080fd5b603d6059565b6040516048919060a3565b60405180910390f35b6057606a565b005b60008054906101000a900460ff1681565b600160008054906101000a900460ff16016000806101000a81548160ff021916908360ff160217905550565b609d8160bc565b82525050565b600060208201905060b660008301846096565b92915050565b600060ff8216905091905056fea2646970667358221220b256d7bef565843be2b65a3f4248805e84430d7caf4ddf2b2cc78ad81d21fbf864736f6c63430008000033",
-							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH1 0x32 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x45964E9E EQ PUSH1 0x37 JUMPI DUP1 PUSH4 0x4F2BE91F EQ PUSH1 0x51 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x3D PUSH1 0x59 JUMP JUMPDEST PUSH1 0x40 MLOAD PUSH1 0x48 SWAP2 SWAP1 PUSH1 0xA3 JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST PUSH1 0x57 PUSH1 0x6A JUMP JUMPDEST STOP JUMPDEST PUSH1 0x0 DUP1 SLOAD SWAP1 PUSH2 0x100 EXP SWAP1 DIV PUSH1 0xFF AND DUP2 JUMP JUMPDEST PUSH1 0x1 PUSH1 0x0 DUP1 SLOAD SWAP1 PUSH2 0x100 EXP SWAP1 DIV PUSH1 0xFF AND ADD PUSH1 0x0 DUP1 PUSH2 0x100 EXP DUP2 SLOAD DUP2 PUSH1 0xFF MUL NOT AND SWAP1 DUP4 PUSH1 0xFF AND MUL OR SWAP1 SSTORE POP JUMP JUMPDEST PUSH1 0x9D DUP2 PUSH1 0xBC JUMP JUMPDEST DUP3 MSTORE POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP3 ADD SWAP1 POP PUSH1 0xB6 PUSH1 0x0 DUP4 ADD DUP5 PUSH1 0x96 JUMP JUMPDEST SWAP3 SWAP2 POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0xFF DUP3 AND SWAP1 POP SWAP2 SWAP1 POP JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xB2 JUMP 0xD7 0xBE CREATE2 PUSH6 0x843BE2B65A3F TIMESTAMP 0x48 DUP1 0x5E DUP5 NUMBER 0xD PUSH29 0xAF4DDF2B2CC78AD81D21FBF864736F6C63430008000033000000000000 ",
-							"sourceMap": "58:176:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;88:28;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;134:98;;;:::i;:::-;;88:28;;;;;;;;;;;;:::o;134:98::-;214:1;202:9;;;;;;;;;;:13;190:9;;:25;;;;;;;;;;;;;;;;;;134:98::o;7:112:1:-;90:22;106:5;90:22;:::i;:::-;85:3;78:35;68:51;;:::o;125:214::-;;252:2;241:9;237:18;229:26;;265:67;329:1;318:9;314:17;305:6;265:67;:::i;:::-;219:120;;;;:::o;345:86::-;;420:4;413:5;409:16;398:27;;388:43;;;:::o"
+							"object": "6080604052348015600f57600080fd5b506004361060325760003560e01c806345964e9e1460375780634f2be91f146051575b600080fd5b603d6059565b6040516048919060a3565b60405180910390f35b6057606a565b005b60008054906101000a900460ff1681565b600160008054906101000a900460ff16016000806101000a81548160ff021916908360ff160217905550565b609d8160bc565b82525050565b600060208201905060b660008301846096565b92915050565b600060ff8216905091905056fea2646970667358221220752c3c70900d6a13cb575261fdbf425f464be9734243b8e9a42909af9b64e43e64736f6c63430008060033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH1 0x32 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x45964E9E EQ PUSH1 0x37 JUMPI DUP1 PUSH4 0x4F2BE91F EQ PUSH1 0x51 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x3D PUSH1 0x59 JUMP JUMPDEST PUSH1 0x40 MLOAD PUSH1 0x48 SWAP2 SWAP1 PUSH1 0xA3 JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST PUSH1 0x57 PUSH1 0x6A JUMP JUMPDEST STOP JUMPDEST PUSH1 0x0 DUP1 SLOAD SWAP1 PUSH2 0x100 EXP SWAP1 DIV PUSH1 0xFF AND DUP2 JUMP JUMPDEST PUSH1 0x1 PUSH1 0x0 DUP1 SLOAD SWAP1 PUSH2 0x100 EXP SWAP1 DIV PUSH1 0xFF AND ADD PUSH1 0x0 DUP1 PUSH2 0x100 EXP DUP2 SLOAD DUP2 PUSH1 0xFF MUL NOT AND SWAP1 DUP4 PUSH1 0xFF AND MUL OR SWAP1 SSTORE POP JUMP JUMPDEST PUSH1 0x9D DUP2 PUSH1 0xBC JUMP JUMPDEST DUP3 MSTORE POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP3 ADD SWAP1 POP PUSH1 0xB6 PUSH1 0x0 DUP4 ADD DUP5 PUSH1 0x96 JUMP JUMPDEST SWAP3 SWAP2 POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0xFF DUP3 AND SWAP1 POP SWAP2 SWAP1 POP JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 PUSH22 0x2C3C70900D6A13CB575261FDBF425F464BE9734243B8 0xE9 LOG4 0x29 MULMOD 0xAF SWAP12 PUSH5 0xE43E64736F PUSH13 0x63430008060033000000000000 ",
+							"sourceMap": "58:176:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;88:28;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;134:98;;;:::i;:::-;;88:28;;;;;;;;;;;;:::o;134:98::-;214:1;202:9;;;;;;;;;;:13;190:9;;:25;;;;;;;;;;;;;;;;;;134:98::o;7:112:1:-;90:22;106:5;90:22;:::i;:::-;85:3;78:35;68:51;;:::o;125:214::-;214:4;252:2;241:9;237:18;229:26;;265:67;329:1;318:9;314:17;305:6;265:67;:::i;:::-;219:120;;;;:::o;345:86::-;380:7;420:4;413:5;409:16;398:27;;388:43;;;:::o"
 						},
 						"gasEstimates": {
 							"creation": {
 								"codeDepositCost": "51000",
-								"executionCost": "20966",
-								"totalCost": "71966"
+								"executionCost": "24366",
+								"totalCost": "75366"
 							},
 							"external": {
-								"add()": "21850",
-								"bigNumber()": "1146"
+								"add()": "26550",
+								"bigNumber()": "2446"
 							}
 						},
 						"legacyAssembly": {
@@ -612,7 +645,7 @@
 							],
 							".data": {
 								"0": {
-									".auxdata": "a2646970667358221220b256d7bef565843be2b65a3f4248805e84430d7caf4ddf2b2cc78ad81d21fbf864736f6c63430008000033",
+									".auxdata": "a2646970667358221220752c3c70900d6a13cb575261fdbf425f464be9734243b8e9a42909af9b64e43e64736f6c63430008060033",
 									".code": [
 										{
 											"begin": 58,
@@ -1466,8 +1499,8 @@
 											"source": 1
 										},
 										{
-											"begin": 125,
-											"end": 339,
+											"begin": 214,
+											"end": 218,
 											"name": "PUSH",
 											"source": 1,
 											"value": "0"
@@ -1607,8 +1640,8 @@
 											"source": 1
 										},
 										{
-											"begin": 345,
-											"end": 431,
+											"begin": 380,
+											"end": 387,
 											"name": "PUSH",
 											"source": 1,
 											"value": "0"
@@ -1678,7 +1711,7 @@
 							"bigNumber()": "45964e9e"
 						}
 					},
-					"metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"add\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"bigNumber\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/SafeMathTester.sol\":\"SafeMathTester\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/SafeMathTester.sol\":{\"keccak256\":\"0xa5b006a360edf40c2e896386e1413a94edecacc99b26a13d9a47a5f90275e672\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a260badf86eefcbdc1f25691eec341886eb70ac990764b77ab84c0ac65a4bba6\",\"dweb:/ipfs/QmYmTZw7H2yRuv6Jxsp3A2GnV78pFdQJVGM1gzDcJd9Eqd\"]}},\"version\":1}",
+					"metadata": "{\"compiler\":{\"version\":\"0.8.6+commit.11564f7e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"add\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"bigNumber\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/SafeMathTester.sol\":\"SafeMathTester\"},\"evmVersion\":\"berlin\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/SafeMathTester.sol\":{\"keccak256\":\"0xa5b006a360edf40c2e896386e1413a94edecacc99b26a13d9a47a5f90275e672\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a260badf86eefcbdc1f25691eec341886eb70ac990764b77ab84c0ac65a4bba6\",\"dweb:/ipfs/QmYmTZw7H2yRuv6Jxsp3A2GnV78pFdQJVGM1gzDcJd9Eqd\"]}},\"version\":1}",
 					"storageLayout": {
 						"storage": [
 							{
@@ -1741,6 +1774,7 @@
 								16
 							],
 							"name": "SafeMathTester",
+							"nameLocation": "67:14:0",
 							"nodeType": "ContractDefinition",
 							"nodes": [
 								{
@@ -1749,6 +1783,7 @@
 									"id": 4,
 									"mutability": "mutable",
 									"name": "bigNumber",
+									"nameLocation": "101:9:0",
 									"nodeType": "VariableDeclaration",
 									"scope": 16,
 									"src": "88:28:0",
@@ -1884,6 +1919,7 @@
 									"kind": "function",
 									"modifiers": [],
 									"name": "add",
+									"nameLocation": "143:3:0",
 									"nodeType": "FunctionDefinition",
 									"parameters": {
 										"id": 5,
@@ -1905,7 +1941,8 @@
 								}
 							],
 							"scope": 17,
-							"src": "58:176:0"
+							"src": "58:176:0",
+							"usedErrors": []
 						}
 					],
 					"src": "33:202:0"
