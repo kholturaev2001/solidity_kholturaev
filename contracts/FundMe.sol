@@ -12,6 +12,8 @@ import "./PriceConverter.sol";
 // 859,757 gas price
 // 840209 gas pricee after adding constant keyword
 
+error NotOwner();
+
 contract FundMe {
     using PriceConverter for uint256;
 
@@ -23,6 +25,7 @@ contract FundMe {
     mapping(address => uint256) public addressToAmountFunded;
 
     address public i_owner;
+
     // 21508 - gas - immutable
     // 23644 - gas - non-immutable
 
@@ -39,7 +42,11 @@ contract FundMe {
         addressToAmountFunded[msg.sender] += msg.value;
     }
 
-    function withdraw() public onlyOwner /* Hey, with this function before you read all this code inside of it look down at the onlyOwner modifier and do whatever it this first and then do whatever underschol (_; === doing the rest of the code) */ {
+    function withdraw()
+        public
+        onlyOwner
+    /* Hey, with this function before you read all this code inside of it look down at the onlyOwner modifier and do whatever it this first and then do whatever underschol (_; === doing the rest of the code) */
+    {
         /* starting index, ending index, step amount */
         for (
             uint256 funderIndex = 0;
@@ -55,12 +62,17 @@ contract FundMe {
         // actually withdraw the funds
 
         // call
-        (bool callSuccess, ) = payable(msg.sender).call{value: address(this).balance}("");
-        require(callSuccess, "Call failed");
+        (bool callSuccess, ) = payable(msg.sender).call{
+            value: address(this).balance
+        }("");
+        require(callSuccess, "Call failed"); /* It is also possible to use NotWoner error here in order to reduce gas cost */
     }
 
-    modifier onlyOwner {
-        require(msg.sender == i_owner, "Sender is not owner!");
+    modifier onlyOwner() {
+        // require(msg.sender == i_owner, NotOwner());
+        if (msg.sender != i_owner) {
+            revert NotOwner();
+        }
         _;
     }
 }
