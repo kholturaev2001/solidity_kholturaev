@@ -15,14 +15,14 @@ import "./PriceConverter.sol";
 contract FundMe {
     using PriceConverter for uint256;
 
-    uint256 public MINIMUM_USD = 50 * 1e18;
+    uint256 public constant MINIMUM_USD = 50 * 1e18;
     // 21415 - gas - constant
     // 23515 - gas - non-contant
 
     address[] public funders;
     mapping(address => uint256) public addressToAmountFunded;
 
-    address public i_owner;
+    address public immutable i_owner;
 
     // 21508 - gas - immutable
     // 23644 - gas - non-immutable
@@ -72,4 +72,12 @@ contract FundMe {
     }
 
     // What happens if someone sends this contract ETH without calling the fund function?
+
+    receive() external payable {
+        fund();
+    }
+
+    fallback() external payable {
+        fund();
+    }
 }
