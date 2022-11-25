@@ -3,16 +3,37 @@
 pragma solidity ^0.8.0;
 
 contract Demo {
-    // Enum 
-    enum Status { Paid, Delivered, Recieved}
+    //Array
+    uint[10] public items;
 
-    Status public currentStatus;
-
-    function pay() public {
-        currentStatus = Status.Paid;
+    function demo() public {
+        items[0] = 100;
+        items[1] = 200;
+        items[4] = 400;
     }
 
-    function delivered() public {
-        currentStatus = Status.Delivered;
+    // Вложенные массивы
+    uint[3][2] public arrInsideArr;
+
+    function demoTwo() public {
+        arrInsideArr = [
+            [2, 54, 1],
+            [6, 23, 77]
+        ];
     }
+
+
+
+    // // Enum 
+    // enum Status { Paid, Delivered, Recieved}
+
+    // Status public currentStatus;
+
+    // function pay() public {
+    //     currentStatus = Status.Paid;
+    // }
+
+    // function delivered() public {
+    //     currentStatus = Status.Delivered;
+    // }
 }

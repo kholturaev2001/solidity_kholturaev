@@ -8,90 +8,58 @@
 			{
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "newValueStr",
-						"type": "string"
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
+				"name": "arrInsideArr",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "demo",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "targetAddr",
-						"type": "address"
-					}
-				],
-				"name": "getBalance",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [],
-				"name": "myStr",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "payments",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "receiveFunds",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "targetAddr",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "transferTo",
+				"name": "demoTwo",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "items",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -108,7 +76,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/GetBalance.sol": "Demo"
+			"contracts/Demo.sol": "Demo"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -122,12 +90,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/GetBalance.sol": {
-			"keccak256": "0x9b392a33b584e6b42eb5fe8d39e931f4f10b69da648bb7157bd74175e4cd94da",
+		"contracts/Demo.sol": {
+			"keccak256": "0x385660265950814895f4ecfb51abb81d9b541039962a227f1e50443effe4c03d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://6f54724592a75736004887a6cfcaaf115164fb51eaa90461cc192c444a93540a",
-				"dweb:/ipfs/QmNm3FAKH7W4sNsfD8twYmEpK546aueR9dvASvFyjDxSpe"
+				"bzz-raw://67d75d0c5beaaeb0bebf06d43a59fe4419c514377b74fc014e61757078577737",
+				"dweb:/ipfs/QmQwj3LvnYgtknmAeGd3ncCcbEwxfh7CEzbeAkYkGFz9Jj"
 			]
 		}
 	},
