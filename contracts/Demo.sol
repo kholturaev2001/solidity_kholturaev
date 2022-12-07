@@ -3,25 +3,46 @@
 pragma solidity ^0.8.0;
 
 contract Demo {
+    // Byte
+    bytes32 public myVar = "Muhammadrasul"; 
+    bytes public myDynVar = "Muhammadrasul"; 
+    // 1 --> 32
+    // 32 * 8 = 256;
+    // uint256
+
+
+    function stringIdBytes() public view returns(bytes1) {
+        return myDynVar[0];
+    }
+
+
+    // function stringLength() public view returns(uint) {
+    //     return myDynVar.length; // 13
+    //     // return myVar.length; // 32
+    // }
+
+
+
+
     //Array
-    /* Array with dynamic length */
 
-    uint256[] public items;
-    uint256 public len;
+    // /* ARRAY WITH DYNAMIC LENGTH */
+    // uint256[] public items;
+    // uint256 public len;
 
-    /* SAMPLE WITH PUSH METHOD */
-    function demoPush() public {
-        items.push(4); // method push can not be used in arrays with fixed length
-        items.push(5);
-        len = items.length;
-    }
+    // /* SAMPLE WITH PUSH METHOD */
+    // function demoPush() public {
+    //     items.push(4); // method push can not be used in arrays with fixed length
+    //     items.push(5);
+    //     len = items.length;
+    // }
 
-    /* ARRAY SAVED IN MEMORY */
-    function sampleMemory() public pure returns(uint256[] memory){
-        uint256[] memory tempArray = new uint256[](10); //set array length while creating an array in memory
-        tempArray[0] = 20;
-        return tempArray;
-    }
+    // /* ARRAY SAVED IN MEMORY */
+    // function sampleMemory() public pure returns(uint256[] memory){
+    //     uint256[] memory tempArray = new uint256[](10); //set array length while creating an array in memory
+    //     tempArray[0] = 20;
+    //     return tempArray;
+    // }
 
     // // Вложенные массивы
     // uint[3][2] public arrInsideArr;
