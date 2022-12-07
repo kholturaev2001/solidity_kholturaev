@@ -6,39 +6,8 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "arrInsideArr",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [],
-				"name": "demo",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "demoTwo",
+				"name": "demoPush",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -60,6 +29,32 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "len",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "sampleMemory",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "pure",
 				"type": "function"
 			}
 		],
@@ -91,11 +86,11 @@
 	},
 	"sources": {
 		"contracts/Demo.sol": {
-			"keccak256": "0x385660265950814895f4ecfb51abb81d9b541039962a227f1e50443effe4c03d",
+			"keccak256": "0x2605987f57ef1c1f4880a08b1d2deb8ab9250f27172b70c55b5d46ea09a5643a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://67d75d0c5beaaeb0bebf06d43a59fe4419c514377b74fc014e61757078577737",
-				"dweb:/ipfs/QmQwj3LvnYgtknmAeGd3ncCcbEwxfh7CEzbeAkYkGFz9Jj"
+				"bzz-raw://22669b2b7461bc7be16182082a7a80af82bfba18d5fc23dfc10dacde07d2780f",
+				"dweb:/ipfs/QmRPuxmWyUVUPMrixD6YeTLdvDDK9YZtSJPLWvDDG4DCUr"
 			]
 		}
 	},
